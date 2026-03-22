@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent | ITK Official</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(0,238,255,.18), transparent 26%),
+        linear-gradient(140deg, #070d18, #101c35 48%, #1c1231);
+      color: #f2f8ff;
+      overflow: hidden;
+    }
+    .panel {
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      padding: 40px 28px;
+      border-radius: 26px;
+      background: rgba(255,255,255,.08);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 22px 60px rgba(0,0,0,.35);
+      position: relative;
+      z-index: 2;
+    }
+    .check {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: grid;
+      place-items: center;
+      font-size: 3rem;
+      color: #00eeff;
+      border: 2px solid rgba(0,238,255,.35);
+      box-shadow: 0 0 30px rgba(0,238,255,.18);
+      background: rgba(0,238,255,.08);
+      animation: pop 1.5s ease-in-out infinite;
+    }
+    h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); margin-bottom: 14px; }
+    p { color: rgba(255,255,255,.82); line-height: 1.8; margin-bottom: 24px; }
+    .actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid rgba(255,255,255,.1);
+      background: linear-gradient(135deg, rgba(0,238,255,.18), rgba(126,92,255,.22));
+      transition: .25s ease;
+    }
+    a:hover { transform: translateY(-3px); }
+    .ring {
+      position: fixed;
+      border: 1px solid rgba(0,238,255,.1);
+      border-radius: 50%;
+      animation: ripple 10s linear infinite;
+      pointer-events: none;
+    }
+    .r1 { width: 250px; height: 250px; }
+    .r2 { width: 430px; height: 430px; animation-duration: 13s; }
+    .r3 { width: 610px; height: 610px; animation-duration: 16s; }
+    @keyframes ripple {
+      from { transform: scale(.95) rotate(0deg); opacity: .8; }
+      to { transform: scale(1.08) rotate(360deg); opacity: .2; }
+    }
+    @keyframes pop {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ring r1"></div>
+  <div class="ring r2"></div>
+  <div class="ring r3"></div>
+  <div class="panel">
+    <div class="check">✓</div>
+    <h1>Message Sent Successfully</h1>
+    <p>Your form was submitted. This thank-you page uses a different upgraded color style while keeping the main portfolio theme premium and modern.</p>
+    <div class="actions">
+      <a href="index1.html">Back to About Page</a>
+      <a href="index.html">Main Portfolio</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | ITK Official</title>
+  <style>
+    :root {
+      --gold: #ffcb52;
+      --purple: #7f5cff;
+      --pink: #ff4fa6;
+      --text: #f8f2ff;
+      --dark: #11071d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,79,166,.25), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(255,203,82,.18), transparent 30%),
+        linear-gradient(135deg, #12081f 0%, #1f1134 45%, #090f1d 100%);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 24px;
+    }
+    .blob {
+      position: fixed;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: .35;
+      animation: float 7s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .blob.one { top: -60px; left: -50px; background: rgba(255,79,166,.6); }
+    .blob.two { bottom: -80px; right: -40px; background: rgba(127,92,255,.55); }
+    .wrap {
+      position: relative;
+      max-width: 760px;
+      width: 100%;
+      padding: 42px 30px;
+      text-align: center;
+      border-radius: 30px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 25px 70px rgba(0,0,0,.35);
+      z-index: 2;
+    }
+    .success-ring {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle, rgba(255,203,82,.25), rgba(255,79,166,.15));
+      border: 2px solid rgba(255,203,82,.35);
+      box-shadow: 0 0 40px rgba(255,203,82,.16);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .success-ring span {
+      font-size: 3.5rem;
+      color: var(--gold);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      margin-bottom: 14px;
+      background: linear-gradient(90deg, #fff, #ffcb52, #ffa2cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      color: rgba(255,255,255,.82);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      max-width: 620px;
+      margin: 0 auto 26px;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: 14px 22px;
+      border-radius: 14px;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(255,203,82,.22), rgba(127,92,255,.28));
+      border: 1px solid rgba(255,255,255,.12);
+      transition: .25s ease;
+    }
+    a:hover { transform: translateY(-3px) scale(1.02); }
+    .confetti, .spark {
+      position: fixed;
+      top: -20px;
+      pointer-events: none;
+      z-index: 1;
+      animation: fall linear forwards;
+    }
+    .confetti {
+      width: 10px;
+      height: 18px;
+      border-radius: 4px;
+    }
+    .spark {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px currentColor;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+    }
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="blob one"></div>
+  <div class="blob two"></div>
+
+  <div class="wrap">
+    <div class="success-ring"><span>✓</span></div>
+    <h1>Thank You!</h1>
+    <p>
+      Your message has been sent successfully. The design theme is now more vibrant here,
+      just like you asked. I’ll respond as quickly as possible.
+    </p>
+    <div class="actions">
+      <a href="index.html">Back to Portfolio</a>
+      <a href="index1.html">Open About Page</a>
+    </div>
+  </div>
+
+  <script>
+    const colors = ["#ffcb52", "#ff4fa6", "#7f5cff", "#ffffff"];
+    function shower(className, count) {
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('div');
+        el.className = className;
+        el.style.left = Math.random() * window.innerWidth + 'px';
+        el.style.background = colors[Math.floor(Math.random()*colors.length)];
+        el.style.color = colors[Math.floor(Math.random()*colors.length)];
+        el.style.opacity = Math.random() * .7 + .3;
+        el.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        el.style.transform = `translateY(-20px) rotate(${Math.random()*360}deg)`;
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 6500);
+      }
+    }
+    setInterval(() => shower('confetti', 7), 220);
+    setInterval(() => shower('spark', 5), 300);
+  </script>
+</body>
+</html>
