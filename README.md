@@ -1,73 +1,79 @@
-# ITK Official - Upgraded Portfolio Package
+# 🚀 Induwara Thathsara Portfolio
 
-This upgraded package includes:
+<div align="center">
 
-- Premium hero sections
-- Smooth scroll reveal animations
-- Loading screen
-- Custom cursor glow effect
-- Glassmorphism cards
-- Profile image-style hero avatar without needing an image file
-- GitHub button added
-- CV download button added
-- Upgraded thank you pages with a different color design
-- Fixed responsive navigation
-- Fixed broker link format for Neex (`https://neex.com`)
-- Cleaner contact forms
+<img src="https://img.shields.io/badge/Portfolio-Website-00e5ff?style=for-the-badge&logo=google-chrome&logoColor=white" />
+<img src="https://img.shields.io/badge/Status-Live-00c853?style=for-the-badge&logo=vercel&logoColor=white" />
+<img src="https://img.shields.io/badge/Responsive-Yes-ff9100?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/Design-Premium-7c4dff?style=for-the-badge&logo=figma&logoColor=white" />
 
-## Files included
+<br><br>
 
-- `index.html` - main portfolio page
-- `index1.html` - more about me page
-- `stylesheet.css` - main styles
-- `style1.css` - second page styles
-- `script.js` - interactions and animations
-- `script1.js` - duplicate script for second page
-- `sript1.js` - kept for compatibility if an old reference exists
-- `thankyou.html` - upgraded thank-you page for main page form
-- `ty.html` - upgraded thank-you page for second page form
+<h2>💻 Personal Portfolio Website</h2>
+<p>
+A premium personal portfolio website created to showcase my skills, services, brokers, prop firms, projects, and contact details with a clean modern interface.
+</p>
 
-## Important setup notes
+</div>
 
-### 1) CV download button
-The site uses this link:
+---
 
-`cv.pdf`
+## ✨ About This Project
 
-To make it work, place your actual CV PDF in the same folder and name it:
+This is my personal portfolio website built with a modern dark theme, smooth animations, responsive layouts, premium UI styling, and a fully working contact form.
 
-`cv.pdf`
+The website is designed to create a professional online presence and provide visitors with a clean experience across desktop and mobile devices.
 
-### 2) FormSubmit redirect
-Current redirects are set as:
+---
 
-- main page -> `thankyou.html`
-- about page -> `ty.html`
+## 🌟 Features
 
-If you deploy on GitHub Pages and want absolute links, change `_next` to your full live URL.
+- 🎨 Premium modern dark UI
+- 📱 Fully responsive design
+- ⚡ Smooth animations and transitions
+- 🧊 Glassmorphism style cards
+- 🧠 Skills section
+- 💼 Services section
+- 📂 Projects showcase
+- 🏦 Brokers & Prop Firms section
+- 📩 Contact form with FormSubmit integration
+- ✅ Custom Thank You page
+- 🌐 Easy deployment with GitHub Pages / Netlify / Vercel
 
-Example:
+---
 
-`https://yourusername.github.io/your-repo-name/thankyou.html`
+## 🛠️ Technologies Used
 
-### 3) Replace the hero avatar with your real photo later
-Right now the site uses a styled "ITK" avatar so it looks complete without missing files.
-If you want, you can later replace the `.profile-avatar` area with an actual image.
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Boxicons**
+- **FormSubmit**
 
-### 4) GitHub button
-Current GitHub link used:
+---
 
-`https://github.com/itkofficial7716`
+## 📁 Project Files
 
-Change it if needed.
-
-## Recommended next upgrade
-
-If you want an even stronger version later, add:
-
-- your real profile photo
-- a real `cv.pdf`
-- more project screenshots
-- project demo links
-- a testimonials section
-- a WhatsApp floating button
+```bash
+portfolio/
+│
+├── index.html
+├── index1.html
+├── stylesheet.css
+├── style1.css
+├── script.js
+├── script1.js
+├── sript1.js
+├── thankyou.html
+├── ty.html
+├── README.md
+│
+├── cp.png
+├── 11.png
+├── 12.png
+├── 13.png
+├── 14.png
+├── 17.png
+├── 20.png
+│
+└── cv.pdf
